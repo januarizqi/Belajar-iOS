@@ -7,15 +7,17 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            VStack {
+                Image("LogoDiobatin")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 161, height: 167)
+            }
         }
-        .padding()
     }
 }
 
