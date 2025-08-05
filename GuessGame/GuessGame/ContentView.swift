@@ -10,9 +10,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Score: 0")
-                .bold()
-                .padding()
+            VStack {
+                Text("Question")
+                    .font(.system(size: 50, weight: .bold))
+                    .frame(height: 350)
+            }
+            
+            HStack{
+                Spacer()
+                Text("Score: 0")
+                    .font(.system(size: 15, weight: .semibold))
+                    .padding()
+            }
             
             Button(action: {
                 print("Button 1")
@@ -21,7 +30,7 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
-                    .frame(height: 50)
+                    .frame(height: 80)
                     .background(Color.blue)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             })
@@ -32,7 +41,7 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
-                    .frame(height: 50)
+                    .frame(height: 80)
                     .background(Color.blue)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             })
@@ -43,10 +52,11 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
-                    .frame(height: 50)
+                    .frame(height: 80)
                     .background(Color.blue)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             })
+            Spacer()
         }
         .padding()
     }
