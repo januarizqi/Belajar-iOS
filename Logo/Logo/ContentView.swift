@@ -16,6 +16,8 @@ struct ContentView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 161, height: 167)
+                Text("Diobatin")
+                    .font(.custom("Poppins-Bold", size: 36))
             }
         }
     }
