@@ -17,17 +17,35 @@ struct ContentView: View {
             Button(action: {
                 print("Button 1")
             }, label: {
-                Text("Button")
+                Image("Cat")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(Color.blue)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
             })
             Button(action: {
                 print("Button 2")
             }, label: {
-                Text("Button")
+                Image("Dog")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(Color.blue)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
             })
             Button(action: {
                 print("Button 3")
             }, label: {
-                Text("Button")
+                Image("Tiger")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .background(Color.blue)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
             })
         }
         .padding()
