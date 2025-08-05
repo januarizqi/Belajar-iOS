@@ -9,16 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var correctAnswer = 0
+    @State var correctAnswer = 0
     @State var score = 0
+    @State var questionTitle = "Who?"
+    @State var questionSubtile = ""
     
     var body: some View {
         VStack {
             VStack {
-                Text("Question")
+                Text("\(questionTitle)")
                     .font(.system(size: 50, weight: .bold))
-                    .frame(height: 350)
+                Text("\(questionSubtile)")
+                    .font(.system(size: 20, weight: .medium))
             }
+            .frame(height: 350)
             
             HStack{
                 Spacer()
@@ -73,6 +77,19 @@ struct ContentView: View {
                 score -= 1
             }
         }
+        if correctAnswer == 0 {
+            questionSubtile = "Correct answer is cat"
+        } else if correctAnswer == 1 {
+            questionSubtile = "Correct answer is dog"
+        } else {
+            questionSubtile = "Correct answer is tiger"
+        }
+        randomizeCorrectAnswer()
+    }
+    
+    func randomizeCorrectAnswer() {
+        let randomCorrectAnswer = Int.random(in: 0..<3)
+        correctAnswer = randomCorrectAnswer
     }
     
 }
