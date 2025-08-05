@@ -28,11 +28,7 @@ struct ContentView: View {
             }
             
             Button(action: {
-                if correctAnswer == 0 {
-                    score += 1
-                } else {
-                    score -= 1
-                }
+                check(answer: 0)
             }, label: {
                 Image("Cat")
                     .resizable()
@@ -43,11 +39,7 @@ struct ContentView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             })
             Button(action: {
-                if correctAnswer == 1 {
-                    score += 1
-                } else {
-                    score -= 1
-                }
+                check(answer: 1)
             }, label: {
                 Image("Dog")
                     .resizable()
@@ -58,11 +50,7 @@ struct ContentView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             })
             Button(action: {
-                if correctAnswer == 2 {
-                    score += 1
-                } else {
-                    score -= 1
-                }
+                check(answer: 2)
             }, label: {
                 Image("Tiger")
                     .resizable()
@@ -76,6 +64,17 @@ struct ContentView: View {
         }
         .padding()
     }
+    
+    func check(answer: Int) {
+        if answer == correctAnswer {
+            score += 1
+        } else {
+            if score != 0 {
+                score -= 1
+            }
+        }
+    }
+    
 }
 
 #Preview {
