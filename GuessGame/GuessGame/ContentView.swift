@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var correctAnswer = 0
+    @State var score = 0
+    
     var body: some View {
         VStack {
             VStack {
@@ -18,13 +22,17 @@ struct ContentView: View {
             
             HStack{
                 Spacer()
-                Text("Score: 0")
+                Text("Score: \(score)")
                     .font(.system(size: 15, weight: .semibold))
                     .padding()
             }
             
             Button(action: {
-                print("Button 1")
+                if correctAnswer == 0 {
+                    score += 1
+                } else {
+                    score -= 1
+                }
             }, label: {
                 Image("Cat")
                     .resizable()
@@ -35,7 +43,11 @@ struct ContentView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             })
             Button(action: {
-                print("Button 2")
+                if correctAnswer == 1 {
+                    score += 1
+                } else {
+                    score -= 1
+                }
             }, label: {
                 Image("Dog")
                     .resizable()
@@ -46,7 +58,11 @@ struct ContentView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 16))
             })
             Button(action: {
-                print("Button 3")
+                if correctAnswer == 2 {
+                    score += 1
+                } else {
+                    score -= 1
+                }
             }, label: {
                 Image("Tiger")
                     .resizable()
