@@ -19,16 +19,6 @@ Membangun berbagai mini-project dan eksperimen yang berkaitan dengan:
 - SwiftUI (atau UIKit, tergantung implementasi)
 - Git & GitHub
 
-## 📂 Struktur Proyek (contoh)
-
-Belajar-iOS/
-├── Logo/ # Folder project utama
-│ └── Logo.xcodeproj # File project Xcode
-│ └── Assets.xcassets/ # Asset gambar dan ikon
-│ └── ContentView.swift # Tampilan awal SwiftUI
-├── .gitignore # File untuk mengecualikan file dari Git
-├── README.md # Dokumentasi proyek ini
-
 ## 🔧 Cara Menjalankan
 
 1. Clone repositori ini:
