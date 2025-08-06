@@ -34,7 +34,7 @@ struct ContentView: View {
             Button(action: {
                 check(answer: 0)
             }, label: {
-                Image("Cat")
+                Image("cat")
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
@@ -46,7 +46,7 @@ struct ContentView: View {
             Button(action: {
                 check(answer: 1)
             }, label: {
-                Image("Dog")
+                Image("dog")
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
@@ -58,7 +58,7 @@ struct ContentView: View {
             Button(action: {
                 check(answer: 2)
             }, label: {
-                Image("Tiger")
+                Image("fox")
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
@@ -85,7 +85,7 @@ struct ContentView: View {
         } else if correctAnswer == 1 {
             questionSubtile = "Correct answer is dog"
         } else {
-            questionSubtile = "Correct answer is tiger"
+            questionSubtile = "Correct answer is fox"
         }
         randomizeCorrectAnswer()
     }
